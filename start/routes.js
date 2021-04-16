@@ -1,5 +1,8 @@
 'use strict'
 
+const { get } = require('@adonisjs/framework/src/Route/Manager');
+const UserController = require('../app/Controllers/Http/UserController');
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -17,3 +20,5 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.get('/login', () => {return 'saved successfully'}); 
